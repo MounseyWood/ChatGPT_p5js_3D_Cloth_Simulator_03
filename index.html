@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768">
+  <!-- Background -->
+  <rect width="1024" height="768" fill="#1A1B1F" rx="0" ry="0"/>
+  
+  <!-- App Container -->
+  <rect x="12" y="12" width="1000" height="744" rx="24" ry="24" fill="#212228"/>
+  
+  <!-- Status Bar -->
+  <rect x="12" y="12" width="1000" height="40" rx="24" ry="24" fill="#212228"/>
+  <text x="40" y="38" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#8E8E93">9:41</text>
+  <path d="M940,25 L940,38 M945,22 L945,41 M950,19 L950,44 M955,22 L955,41 M960,25 L960,38" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+  <path d="M920,24 A8,8 0 0 1 920,40 A12,12 0 0 0 900,40 A12,12 0 0 0 900,24 A8,8 0 0 1 920,24" fill="none" stroke="#8E8E93" stroke-width="2"/>
+  <circle cx="880" cy="32" r="8" fill="none" stroke="#8E8E93" stroke-width="2"/>
+  
+  <!-- App Title -->
+  <text x="512" y="80" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="600" fill="#E4E4E4" text-anchor="middle">Cloth Physics</text>
+  
+  <!-- Canvas Area (Neumorphic) -->
+  <rect x="300" y="110" width="700" height="630" rx="20" ry="20" fill="#212228" filter="url(#neomorph-canvas)"/>
+  
+  <!-- Cloth Simulation Visualization (mockup representation) -->
+  <rect x="320" y="130" width="660" height="590" rx="10" ry="10" fill="#1E1F24"/>
+  <path d="M450,320 C500,250 570,310 600,220 C630,280 670,200 700,300 C750,220 800,330 830,260" stroke="#6E7484" fill="none" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M450,330 C500,260 570,320 600,230 C630,290 670,210 700,310 C750,230 800,340 830,270" stroke="#586274" fill="none" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M450,340 C500,270 570,330 600,240 C630,300 670,220 700,320 C750,240 800,350 830,280" stroke="#485264" fill="none" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Wireframe representation -->
+  <g opacity="0.4">
+    <line x1="450" y1="320" x2="500" y2="250" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="500" y1="250" x2="570" y2="310" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="570" y1="310" x2="600" y2="220" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="600" y1="220" x2="630" y2="280" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="630" y1="280" x2="670" y2="200" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="670" y1="200" x2="700" y2="300" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="700" y1="300" x2="750" y2="220" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="750" y1="220" x2="800" y2="330" stroke="#8E98AA" stroke-width="1"/>
+    <line x1="800" y1="330" x2="830" y2="260" stroke="#8E98AA" stroke-width="1"/>
+  </g>
+  
+  <!-- Sphere for "Draped" mode -->
+  <circle cx="650" cy="380" r="100" fill="none" stroke="#2D2F38" stroke-width="2"/>
+  <circle cx="650" cy="380" r="95" fill="none" stroke="#2A2C33" stroke-width="2"/>
+  <circle cx="650" cy="380" r="90" fill="none" stroke="#27292F" stroke-width="2"/>
+  
+  <!-- Control Panel (Left panel) - Progressive disclosure implementation -->
+  <rect x="24" y="110" width="260" height="630" rx="20" ry="20" fill="#212228" filter="url(#neomorph-panel)"/>
+  
+  <!-- Mode Selector (Always visible) -->
+  <rect x="40" y="130" width="230" height="70" rx="16" ry="16" fill="#1D1E23" filter="url(#neomorph-inset)"/>
+  <text x="50" y="155" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="500" fill="#E4E4E4">Simulation Mode</text>
+  
+  <!-- Segmented Control for Mode -->
+  <rect x="50" y="165" width="210" height="24" rx="12" ry="12" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+  <rect x="50" y="165" width="105" height="24" rx="12" ry="12" fill="#3A3B40" filter="url(#neomorph-button-active)"/>
+  <text x="103" y="183" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#FFFFFF" text-anchor="middle">Plane</text>
+  <text x="207" y="183" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#8E8E93" text-anchor="middle">Draped</text>
+  
+  <!-- Collapsible Panels (Progressive Disclosure) -->
+  
+  <!-- Basic Parameters (Expanded by default) -->
+  <rect x="40" y="220" width="230" height="50" rx="16" ry="16" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="60" y="250" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="500" fill="#E4E4E4">Basic Parameters</text>
+  <circle cx="240" cy="245" r="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <path d="M240,240 L240,250 M235,245 L245,245" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Basic Parameters Panel (Expanded) -->
+  <rect x="40" y="280" width="230" height="180" rx="16" ry="16" fill="#1D1E23" filter="url(#neomorph-inset)"/>
+  
+  <!-- Damping Parameter -->
+  <text x="55" y="305" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Damping: 0.98</text>
+  <rect x="55" y="315" width="200" height="6" rx="3" ry="3" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+  <rect x="55" y="315" width="180" height="6" rx="3" ry="3" fill="#555660"/>
+  <circle cx="235" cy="318" r="10" fill="#2A2B30" filter="url(#neomorph-knob)"/>
+  
+  <!-- Gravity Parameter -->
+  <text x="55" y="350" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Gravity: 0.4</text>
+  <rect x="55" y="360" width="200" height="6" rx="3" ry="3" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+  <rect x="55" y="360" width="80" height="6" rx="3" ry="3" fill="#555660"/>
+  <circle cx="135" cy="363" r="10" fill="#2A2B30" filter="url(#neomorph-knob)"/>
+  
+  <!-- Interaction Mode (Basic panel) -->
+  <text x="55" y="395" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Interaction Mode</text>
+  <rect x="55" y="405" width="200" height="36" rx="18" ry="18" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+  <rect x="55" y="405" width="100" height="36" rx="18" ry="18" fill="#3A3B40" filter="url(#neomorph-button-active)"/>
+  <text x="105" y="428" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#FFFFFF" text-anchor="middle">Rotate</text>
+  <text x="205" y="428" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#8E8E93" text-anchor="middle">Drag</text>
+  
+  <!-- Advanced Parameters (Collapsed) -->
+  <rect x="40" y="480" width="230" height="50" rx="16" ry="16" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="60" y="510" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="500" fill="#E4E4E4">Advanced Parameters</text>
+  <circle cx="240" cy="505" r="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <path d="M235,505 L245,505" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Visualization Settings (Collapsed) -->
+  <rect x="40" y="550" width="230" height="50" rx="16" ry="16" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="60" y="580" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="500" fill="#E4E4E4">Visualization Settings</text>
+  <circle cx="240" cy="575" r="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <path d="M235,575 L245,575" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Bottom Controls for Reset/Play -->
+  <rect x="40" y="660" width="230" height="50" rx="16" ry="16" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="155" y="690" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="500" fill="#E4E4E4" text-anchor="middle">Reset Cloth</text>
+  
+  <!-- Floating Controls (Bottom Right) -->
+  <circle cx="920" cy="680" r="40" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <!-- Pause icon -->
+  <rect x="910" y="670" width="8" height="20" rx="2" ry="2" fill="#E4E4E4"/>
+  <rect x="922" y="670" width="8" height="20" rx="2" ry="2" fill="#E4E4E4"/>
+  
+  <circle cx="830" cy="680" r="30" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <!-- Reset View icon -->
+  <path d="M820,680 L840,680 M830,670 L830,690" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Advanced Parameters Panel (Hidden, showing in semi-transparent to illustrate) -->
+  <g opacity="0.2">
+    <rect x="40" y="540" width="230" height="200" rx="16" ry="16" fill="#1D1E23" filter="url(#neomorph-inset)"/>
+    
+    <!-- Stretch Parameter -->
+    <text x="55" y="565" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Stretch: 1.0</text>
+    <rect x="55" y="575" width="200" height="6" rx="3" ry="3" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+    <rect x="55" y="575" width="100" height="6" rx="3" ry="3" fill="#555660"/>
+    <circle cx="155" cy="578" r="10" fill="#2A2B30" filter="url(#neomorph-knob)"/>
+    
+    <!-- Bending Parameter -->
+    <text x="55" y="610" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Bending: 1.0</text>
+    <rect x="55" y="620" width="200" height="6" rx="3" ry="3" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+    <rect x="55" y="620" width="100" height="6" rx="3" ry="3" fill="#555660"/>
+    <circle cx="155" cy="623" r="10" fill="#2A2B30" filter="url(#neomorph-knob)"/>
+    
+    <!-- Wind Controls in a grid -->
+    <text x="55" y="655" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BBBBBB">Wind</text>
+    
+    <!-- Wind XYZ as a grouped control -->
+    <rect x="55" y="665" width="200" height="60" rx="12" ry="12" fill="#1A1A1E" filter="url(#neomorph-inset)"/>
+    <text x="70" y="690" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8E8E93">X: 0.2</text>
+    <text x="70" y="710" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8E8E93">Y: 0.0</text>
+    <text x="160" y="690" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8E8E93">Z: 0.1</text>
+    <text x="160" y="710" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8E8E93">Buffer: 1.0</text>
+  </g>
+  
+  <!-- Quick Action Bar (Bottom of Canvas) -->
+  <rect x="350" y="670" width="600" height="50" rx="12" ry="12" fill="#1D1E23" filter="url(#neomorph-inset)" opacity="0.5"/>
+  
+  <!-- Display Control Chips -->
+  <rect x="360" y="680" width="80" height="30" rx="15" ry="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="400" y="700" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#BBBBBB" text-anchor="middle">Cloth</text>
+  
+  <rect x="450" y="680" width="80" height="30" rx="15" ry="15" fill="#3A3B40" filter="url(#neomorph-button-active)"/>
+  <text x="490" y="700" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#FFFFFF" text-anchor="middle">Overlaid</text>
+  
+  <rect x="540" y="680" width="80" height="30" rx="15" ry="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="580" y="700" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#BBBBBB" text-anchor="middle">Stress</text>
+  
+  <rect x="630" y="680" width="100" height="30" rx="15" ry="15" fill="#2A2B30" filter="url(#neomorph-button)"/>
+  <text x="680" y="700" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#BBBBBB" text-anchor="middle">Structure</text>
+  
+  <!-- Neumorphic effects definitions -->
+  <defs>
+    <!-- Soft panel shadow -->
+    <filter id="neomorph-panel" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="6" dy="6" stdDeviation="5" flood-color="#151619" flood-opacity="0.8"/>
+      <feDropShadow dx="-6" dy="-6" stdDeviation="5" flood-color="#2A2B31" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Canvas area shadow -->
+    <filter id="neomorph-canvas" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="8" dy="8" stdDeviation="6" flood-color="#151619" flood-opacity="0.7"/>
+      <feDropShadow dx="-8" dy="-8" stdDeviation="6" flood-color="#2A2B31" flood-opacity="0.4"/>
+    </filter>
+    
+    <!-- Inset shadow for controls -->
+    <filter id="neomorph-inset" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="2" dy="2" />
+      <feGaussianBlur stdDeviation="2" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="#151619" flood-opacity="0.8" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+      <feOffset dx="-2" dy="-2" />
+      <feGaussianBlur stdDeviation="2" result="offset-blur-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur-2" result="inverse-2"/>
+      <feFlood flood-color="#2A2B31" flood-opacity="0.3" result="color-2"/>
+      <feComposite operator="in" in="color-2" in2="inverse-2" result="shadow-2"/>
+      <feComposite operator="over" in="shadow-2" in2="SourceGraphic"/>
+    </filter>
+    
+    <!-- Button shadow -->
+    <filter id="neomorph-button" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="2" flood-color="#151619" flood-opacity="0.8"/>
+      <feDropShadow dx="-3" dy="-3" stdDeviation="2" flood-color="#2A2B31" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Active segment shadow -->
+    <filter id="neomorph-button-active" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#252527" flood-opacity="0.8"/>
+      <feDropShadow dx="-1" dy="-1" stdDeviation="1" flood-color="#45464A" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Slider knob -->
+    <filter id="neomorph-knob" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#151619" flood-opacity="0.8"/>
+      <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#2A2B31" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+</svg>
